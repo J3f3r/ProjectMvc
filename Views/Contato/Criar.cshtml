@@ -1,0 +1,40 @@
+@model ProjectMvc.Models.Contato
+
+@{
+    ViewData["Title"] = "Criar novo contato";
+}
+
+<h1>Criar novo contato</h1>
+
+<hr/>
+
+<div class="row">
+    <div class=col-md-4>
+        <form asp-action="Criar">
+            <div class="form-group">
+                <label asp-form="Nome" class="control-label"></label>
+                <input asp-form="Nome" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-form="Telefone" class="control-label"></label>
+                <input asp-form="Telefone" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-form="Ativo" class="control-label"></label>
+                <input type="checkbox" asp-form="Ativo" class="form-check-input" />
+            </div>
+
+            <br>
+
+            <div class="form-group">
+                <input type="submit" value="Criar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<hr/>
+
+<div>
+    <a asp-action="Index"></a>
+</div>
